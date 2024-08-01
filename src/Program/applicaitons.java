@@ -4,27 +4,28 @@ package Program;
  */
 
 
+import entities.Triangle;
+
 import java.util.Scanner;
 
 public class applicaitons {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double xA, xB, xC, yA, yB, yC;
+        Triangle x, y;
+        x = new Triangle();
+        y = new Triangle();
 
         System.out.println("Enter the measures of triangle X: ");
-        xA = scanner.nextDouble();
-        xB = scanner.nextDouble();
-        xC = scanner.nextDouble();
+        x.a = scanner.nextDouble();
+        x.b = scanner.nextDouble();
+        x.c = scanner.nextDouble();
         System.out.println("Enter the measures of triangle Y: ");
-        yA = scanner.nextDouble();
-        yB = scanner.nextDouble();
-        yC = scanner.nextDouble();
+        y.a = scanner.nextDouble();
+        y.b = scanner.nextDouble();
+        y.c = scanner.nextDouble();
 
-        double p = (xA + xB + xC) / 2.0;
-        double areX = Math.sqrt(p *(p - xA) * (p - xB) * (p - xC));
-
-        p = (yA + yB + yC) / 2.0;
-        double areY = Math.sqrt(p *(p - yA) * (p - yB) * (p - yC));
+        double areX = x.area();
+        double areY = y.area();
 
         System.out.printf("Triangle X area: %.4f%n", areX);
         System.out.printf("Triangle Y area: %.4f%n", areY);
