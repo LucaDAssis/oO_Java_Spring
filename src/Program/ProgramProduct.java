@@ -21,8 +21,27 @@ public class ProgramProduct {
         //    "R$: " + product.price + " ," + product.quantity + " Units" +
         //        " Total: $" + product.TotalValueInStock());
 
-        System.out.println(product);
 
+
+        //Aqui estou fazendo os prints com o metodo ToString
+        System.out.println();
+        System.out.println("Product data: " + product);
+
+        System.out.println();
+        System.out.println("Enter the number of products to be added in stock: ");
+        int quantity = scanner.nextInt();
+        product.AddProducts(quantity);
+
+        System.out.println();
+        System.out.println("Update data: " + product);
+
+        System.out.println();
+        System.out.println("Enter the number of products to be removed from stock: ");
+        quantity = scanner.nextInt();
+        product.RemoveProdutc(quantity);
+
+        System.out.println();
+        System.out.println("Update data: " + product);
 
 
         scanner.close();

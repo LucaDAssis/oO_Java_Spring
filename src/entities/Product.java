@@ -10,6 +10,7 @@ public class Product {
         return this.quantity * this.price;
     }
 
+
     public void AddProducts(int quantity){
         this.quantity += quantity;
     };
