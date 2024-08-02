@@ -43,7 +43,6 @@ public class ProgramProduct {
         System.out.println();
         System.out.println("Update data: " + product);
 
-
         scanner.close();
     }
 }
