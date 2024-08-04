@@ -7,15 +7,16 @@ import java.util.Scanner;
 public class ProgramProduct {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Product product = new Product();
+
 
         System.out.println("Enter Product Data:");
         System.out.println("Name: ");
-        product.name = scanner.next();
+        String name = scanner.next();
         System.out.println("Price: ");
-        product.price = scanner.nextDouble();
+        double price = scanner.nextDouble();
         System.out.println("Quantity in Stock: ");
-        product.quantity = scanner.nextInt();
+        int quantity = scanner.nextInt();
+        Product product = new Product(name,price,quantity);
 
         //System.out.println("Product data: " + product.name + " ," +
         //    "R$: " + product.price + " ," + product.quantity + " Units" +
@@ -29,7 +30,7 @@ public class ProgramProduct {
 
         System.out.println();
         System.out.println("Enter the number of products to be added in stock: ");
-        int quantity = scanner.nextInt();
+        quantity = scanner.nextInt();
         product.AddProducts(quantity);
 
         System.out.println();
